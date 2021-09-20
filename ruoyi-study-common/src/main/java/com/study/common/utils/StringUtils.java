@@ -24,12 +24,12 @@ public class StringUtils {
     /**
      * 空串
      */
-    private static final String NULL_STR = EMPTY;
+    public static final String NULL_STR = EMPTY;
 
     /**
      * 下划线
      */
-    private static final char SEPARATOR = '_';
+    public static final char SEPARATOR = '_';
 
     /**
      * 返回非空值

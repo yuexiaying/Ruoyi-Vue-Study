@@ -1,0 +1,40 @@
+ruoyi:
+  study:
+    captchaType: math
+# 开发环境配置
+server:
+  port: 8085
+
+# Spring配置
+spring:
+  profiles:
+    active: druid
+
+  # redis配置
+  redis:
+    host: 192.168.5.129
+    port: 6379
+    database: 0
+    password:
+    timeout: 10s
+
+# 日志配置
+logging:
+  level:
+    com.study: info
+    org.springframework: warn
+
+# MyBatis配置
+mybatis:
+  # 搜索指定包别名
+  typeAliasesPackage: com.study.**.mapper
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis/mybatis-config.xml
+
+# PageHelper分页插件
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true
+  params: count=countSql
